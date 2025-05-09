@@ -36,7 +36,7 @@ $(EXEC): $(OBJS)
 	@echo "Enlazando para crear el ejecutable: $@"
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS) $(LIBS)
 	@echo "Ejecutable '$@' creado exitosamente."
-	chmod +x $@
+	# chmod +x $@
 
 $(ODIR)/%.o: $(SRCDIR)/%.cpp
 	@mkdir -p $(ODIR)
