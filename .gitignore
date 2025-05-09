@@ -1,0 +1,31 @@
+# Archivos compilados
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+
+# Ejecutable
+main
+app
+*.exe
+
+# Carpetas de build (si usas alguna como "build" o "bin")
+build/
+bin/
+obj/
+
+# Archivos específicos de IDEs/editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Archivos de log
+*.log
+
+# Otros
+output/
