@@ -1,5 +1,5 @@
 # Nombre del compilador de C++
-CXX = g++
+CXX = clang++
 
 # Flags del compilador:
 CXXFLAGS = -std=c++17 -Wall -Wextra -g
@@ -33,9 +33,10 @@ OBJS = $(patsubst $(SRCDIR)/%.cpp,$(ODIR)/%.o,$(SRCS))
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-    @echo "Enlazando para crear el ejecutable: $@"
+	@echo "Enlazando para crear el ejecutable: $@"
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS) $(LIBS)
 	@echo "Ejecutable '$@' creado exitosamente."
+	chmod +x $@
 
 $(ODIR)/%.o: $(SRCDIR)/%.cpp
 	@mkdir -p $(ODIR)
